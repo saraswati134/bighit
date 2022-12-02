@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "address",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "zipcode": {
+      "type": "integer"
+    },
+    "city": {
+      "type": "string"
+    },
+    "landmark": {
+      "type": "string"
+    },
+    "employee": {
+      "via": "address",
+      "model": "employee"
+    }
+  }
+}

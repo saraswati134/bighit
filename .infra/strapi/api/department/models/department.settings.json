@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departments",
+  "info": {
+    "name": "Department",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "task": {
+      "collection": "task",
+      "via": "departments",
+      "dominant": true
+    },
+    "employee": {
+      "via": "departments",
+      "collection": "employee"
+    }
+  }
+}

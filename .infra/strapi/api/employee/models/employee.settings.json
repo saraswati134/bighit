@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "name": "Employee",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "doj": {
+      "type": "date"
+    },
+    "dob": {
+      "type": "date"
+    },
+    "departments": {
+      "via": "employee",
+      "collection": "department",
+      "dominant": true
+    },
+    "tasks": {
+      "via": "employees",
+      "collection": "task",
+      "dominant": true
+    },
+    "address": {
+      "via": "employee",
+      "model": "address"
+    }
+  }
+}
