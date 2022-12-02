@@ -1,0 +1,14 @@
+
+type Department {
+  id: Int
+  name: String
+  isActive: Boolean
+  tasks: [Task]
+  employee:[Employee]
+
+}
+
+type Query {
+  department(id: Int!): Department
+  departments: [Department]
+}

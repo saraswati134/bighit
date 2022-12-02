@@ -1,0 +1,17 @@
+
+type Employee {
+  id: Int
+  name: String
+  email: String
+  dob: String
+  doj: String
+  created_at: String
+  updated_at: String
+  tasks: [Task]
+  departments:[Department]
+}
+
+type Query {
+  employee(id: Int!): Employee
+  employees: [Employee]
+}
